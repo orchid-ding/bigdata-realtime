@@ -11,7 +11,7 @@
 
     <title>
         
-          home - Real-Time
+          Real-Time
         
     </title>
 
@@ -81,54 +81,42 @@ show_sidebar()
 
       <div class="column col-8 col-lg-12">
         <div class="book-content">
-          <div class="book-navbar">
-  <header class="navbar">
-  <section class="navbar-section">
-    <img class="navbar-icon" src="/favicon.ico">
-  </section>
-  <section class="navbar-center">
-    Real-Time
-  </section>
-  <section class="navbar-section">
-    <label class="accordion-header c-hand" for="accordion-sidebar">
-      <i class="icon icon-menu"></i>
-    </label>
-  </section>
-</header>
+          <div class='book-archive'>
+  <!-- Title -->
+  
+    <h2>Archives</h2>
+  
 
-<div class="accordion">
-  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
-  <div class="accordion-body">
-    <ul>
-<li><a href="/bigdata">Home</a></li>
-<li>Spark streaming</li>
-<li>apache flink</li>
-</ul>
+  
+    <!-- Split post by year -->
+    
+  
 
-  </div>
+  
+      <div class="book-archive-years">
+          <h5>2020</h5>
+          <ul class="archive-list-item">
+          
+              <li>
+                <span>2020-01-23</span>
+                <a href="/menu/">
+                  menu
+                </a>
+              </li>
+          
+              <li>
+                <span>2020-01-23</span>
+                <a href="/home/">
+                  home
+                </a>
+              </li>
+          
+          </ul>
+      </div>
+  
+
+  
 </div>
-</div>
-
-<div class="book-post">
-  <h1 id="Real-Time-Big-Data">Real-Time Big Data</h1>
-<p>大数据之实时计算</p>
-<h2 id="spark-streaming"><a href="http://spark.apache.org/docs/latest/streaming-programming-guide.html" target="_blank" rel="noopener">spark streaming</a></h2>
-<ul>
-<li>Spark流是对于Spark核心API的拓展，从而支持对于实时数据流的可拓展，高吞吐量和容错性流处理</li>
-<li>数据可以由多个源取得，例如：Kafka，Flume，Twitter，ZeroMQ，Kinesis或者TCP接口。</li>
-<li>同时可以使用由如map，reduce，join和window这样的高层接口描述的复杂算法进行处理。</li>
-<li>处理过的数据可以被推送到文件系统，数据库（如：Hbase、Mysql等）和HDFS。</li>
-</ul>
-<h2 id="apache-flink"><a href="https://flink.apache.org/zh/flink-architecture.html" target="_blank" rel="noopener">apache flink</a></h2>
-<ul>
-<li>Apache Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams. Flink has been designed to run in all common cluster environments, perform computations at in-memory speed and at <em>any scale</em></li>
-</ul>
-
-</div>
-
-
-
-<script src="/js/book-post.js"></script>
         </div>
       </div>
 
