@@ -1,0 +1,858 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>读取数据 | 课程概述</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../3-离线推荐/index.html" />
+    
+    
+    <link rel="prev" href="../2-加载数据/1-项目搭建.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.2"
+        data-chapter-title="读取数据"
+        data-filepath="2-加载数据/2-读取数据.md"
+        data-basepath=".."
+        data-revision="Wed Feb 19 2020 15:25:54 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="1-项目搭建/index.html">
+            
+                
+                    <a href="../1-项目搭建/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        推荐系统项目
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="1-项目搭建/1-项目介绍.html">
+            
+                
+                    <a href="../1-项目搭建/1-项目介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        项目搭建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-项目搭建/2-数据介绍.html">
+            
+                
+                    <a href="../1-项目搭建/2-数据介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        数据介绍
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2-加载数据/index.html">
+            
+                
+                    <a href="../2-加载数据/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        加载数据
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="2-加载数据/1-项目搭建.html">
+            
+                
+                    <a href="../2-加载数据/1-项目搭建.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        创建项目
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="2-加载数据/2-读取数据.html">
+            
+                
+                    <a href="../2-加载数据/2-读取数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        读取数据
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="3-离线推荐/index.html">
+            
+                
+                    <a href="../3-离线推荐/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        离线推荐
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="3-离线推荐/1-添加业务系统.html">
+            
+                
+                    <a href="../3-离线推荐/1-添加业务系统.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        添加业务系统
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3-离线推荐/2-统计推荐.html">
+            
+                
+                    <a href="../3-离线推荐/2-统计推荐.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        统计推荐
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="3-离线推荐/3-基于内容推荐.html">
+            
+                
+                    <a href="../3-离线推荐/3-基于内容推荐.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        基于内容推荐
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="3-离线推荐/4-基于隐语义协同过滤推荐.html">
+            
+                
+                    <a href="../3-离线推荐/4-基于隐语义协同过滤推荐.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        隐语义协同过滤推荐
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="4-实时推荐/index.html">
+            
+                
+                    <a href="../4-实时推荐/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        实时推荐
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="4-实时推荐/1-实时推荐服务建设.html">
+            
+                
+                    <a href="../4-实时推荐/1-实时推荐服务建设.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        实时推荐服务建设
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="4-实时推荐/2-实时系统联调.html">
+            
+                
+                    <a href="../4-实时推荐/2-实时系统联调.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        实时推荐联调
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >课程概述</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x4E3B;&#x9898;&#x5B9E;&#x73B0;">&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x4E3B;&#x9898;&#x5B9E;&#x73B0;</h1>
+<h3 id="1-&#x542F;&#x52A8;mongo-&#x7565;">1 &#x542F;&#x52A8;mongo &#x7565;</h3>
+<h3 id="2-&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x4E3B;&#x4F53;&#x5B9E;&#x73B0;">2. &#x6570;&#x636E;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x4E3B;&#x4F53;&#x5B9E;&#x73B0;</h3>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x4F1A;&#x4E3A;&#x539F;&#x59CB;&#x6570;&#x636E;&#x5B9A;&#x4E49;&#x51E0;&#x4E2A;&#x6837;&#x4F8B;&#x7C7B;&#xFF0C;&#x901A;&#x8FC7; SparkContext &#x7684; textFile &#x65B9;&#x6CD5;&#x4ECE;&#x6587;&#x4EF6; &#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x8F6C;&#x6362;&#x6210; DataFrame&#xFF0C;&#x518D;&#x5229;&#x7528; Spark SQL &#x63D0;&#x4F9B;&#x7684; write &#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7684; &#x5206;&#x5E03;&#x5F0F;&#x63D2;&#x5165;&#x3002;</p>
+<p>&#x5728; DataLoader/src/main/scala &#x4E0B;&#x65B0;&#x5EFA; package&#xFF0C;&#x547D;&#x540D;&#x4E3A; com.kkb.recommender&#xFF0C; &#x65B0;&#x5EFA;&#x540D;&#x4E3A; DataLoader &#x7684; scala class &#x6587;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p><strong>&#x7A0B;&#x5E8F;&#x4E3B;&#x4F53;&#x5982;&#x4E0B;</strong></p>
+<p><strong>DataLoader/src/main/scala/com.kkb.recommerder/DataLoader.scala</strong></p>
+<pre><code class="lang-scala"><span class="hljs-comment">/**
+ * Movie &#x6570;&#x636E;&#x96C6;
+ *
+ * 260                                         &#x7535;&#x5F71;ID&#xFF0C;mid
+ * Star Wars: Episode IV - A New Hope (1977)   &#x7535;&#x5F71;&#x540D;&#x79F0;&#xFF0C;name
+ * Princess Leia is captured and held hostage  &#x8BE6;&#x60C5;&#x63CF;&#x8FF0;&#xFF0C;descri
+ * 121 minutes                                 &#x65F6;&#x957F;&#xFF0C;timelong
+ * September 21, 2004                          &#x53D1;&#x884C;&#x65F6;&#x95F4;&#xFF0C;issue
+ * 1977                                        &#x62CD;&#x6444;&#x65F6;&#x95F4;&#xFF0C;shoot
+ * English                                     &#x8BED;&#x8A00;&#xFF0C;language
+ * Action|Adventure|Sci-Fi                     &#x7C7B;&#x578B;&#xFF0C;genres
+ * Mark Hamill|Harrison Ford|Carrie Fisher     &#x6F14;&#x5458;&#x8868;&#xFF0C;actors
+ * George Lucas                                &#x5BFC;&#x6F14;&#xFF0C;directors
+ *
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Movie</span>(</span>mid: <span class="hljs-type">Int</span>, name: <span class="hljs-type">String</span>, descri: <span class="hljs-type">String</span>, timelong: <span class="hljs-type">String</span>, issue: <span class="hljs-type">String</span>,
+                 shoot: <span class="hljs-type">String</span>, language: <span class="hljs-type">String</span>, genres: <span class="hljs-type">String</span>, actors: <span class="hljs-type">String</span>, directors: <span class="hljs-type">String</span>)
+
+<span class="hljs-comment">/**
+ * Rating&#x6570;&#x636E;&#x96C6;
+ *
+ * 1,31,2.5,1260759144
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rating</span>(</span>uid: <span class="hljs-type">Int</span>, mid: <span class="hljs-type">Int</span>, score: <span class="hljs-type">Double</span>, timestamp: <span class="hljs-type">Int</span> )
+
+<span class="hljs-comment">/**
+ * Tag&#x6570;&#x636E;&#x96C6;
+ *
+ * 15,1955,dentist,1193435061
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span>(</span>uid: <span class="hljs-type">Int</span>, mid: <span class="hljs-type">Int</span>, tag: <span class="hljs-type">String</span>, timestamp: <span class="hljs-type">Int</span>)
+
+<span class="hljs-comment">// &#x628A;mongo&#x548C;es&#x7684;&#x914D;&#x7F6E;&#x5C01;&#x88C5;&#x6210;&#x6837;&#x4F8B;&#x7C7B;</span>
+
+<span class="hljs-comment">/**
+ *
+ * @param uri MongoDB&#x8FDE;&#x63A5;
+ * @param db  MongoDB&#x6570;&#x636E;&#x5E93;
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MongoConfig</span>(</span>uri:<span class="hljs-type">String</span>, db:<span class="hljs-type">String</span>)
+
+<span class="hljs-comment">/**
+ *
+ * @param httpHosts       http&#x4E3B;&#x673A;&#x5217;&#x8868;&#xFF0C;&#x9017;&#x53F7;&#x5206;&#x9694;
+ * @param transportHosts  transport&#x4E3B;&#x673A;&#x5217;&#x8868;
+ * @param index            &#x9700;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x7D22;&#x5F15;
+ * @param clustername      &#x96C6;&#x7FA4;&#x540D;&#x79F0;&#xFF0C;&#x9ED8;&#x8BA4;elasticsearch
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ESConfig</span>(</span>httpHosts:<span class="hljs-type">String</span>, transportHosts:<span class="hljs-type">String</span>, index:<span class="hljs-type">String</span>, clustername:<span class="hljs-type">String</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">DataLoader</span> {</span>
+
+  <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x5E38;&#x91CF;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">MOVIE_DATA_PATH</span> =</span> <span class="hljs-string">&quot;/Users/xingyeah/Desktop/workspace/MovieSystemRecommender/recomonder/dataLoader/src/main/resources/movies.csv&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">RATING_DATA_PATH</span> =</span> <span class="hljs-string">&quot;/Users/xingyeah/Desktop/workspace/MovieSystemRecommender/recomonder/dataLoader/src/main/resources/ratings.csv&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">TAG_DATA_PATH</span> =</span> <span class="hljs-string">&quot;/Users/xingyeah/Desktop/workspace/MovieSystemRecommender/recomonder/dataLoader/src/main/resources/tags.csv&quot;</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">MONGODB_MOVIE_COLLECTION</span> =</span> <span class="hljs-string">&quot;Movie&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">MONGODB_RATING_COLLECTION</span> =</span> <span class="hljs-string">&quot;Rating&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">MONGODB_TAG_COLLECTION</span> =</span> <span class="hljs-string">&quot;Tag&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">ES_MOVIE_INDEX</span> =</span> <span class="hljs-string">&quot;Movie&quot;</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>(</span>args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">config</span> =</span> <span class="hljs-type">Map</span>(
+      <span class="hljs-string">&quot;spark.cores&quot;</span> -&gt; <span class="hljs-string">&quot;local[*]&quot;</span>,
+      <span class="hljs-string">&quot;mongo.uri&quot;</span> -&gt; <span class="hljs-string">&quot;mongodb://cdh1:27017/recommender&quot;</span>,
+      <span class="hljs-string">&quot;mongo.db&quot;</span> -&gt; <span class="hljs-string">&quot;recommender&quot;</span>,
+      <span class="hljs-string">&quot;es.httpHosts&quot;</span> -&gt; <span class="hljs-string">&quot;cdh1:9200&quot;</span>,
+      <span class="hljs-string">&quot;es.transportHosts&quot;</span> -&gt; <span class="hljs-string">&quot;cdh1:9300&quot;</span>,
+      <span class="hljs-string">&quot;es.index&quot;</span> -&gt; <span class="hljs-string">&quot;recommender&quot;</span>,
+      <span class="hljs-string">&quot;es.cluster.name&quot;</span> -&gt; <span class="hljs-string">&quot;cluster_es&quot;</span>
+    )
+
+    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;sparkConf</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">sparkConf</span> =</span> <span class="hljs-keyword">new</span> <span class="hljs-type">SparkConf</span>().setMaster(config(<span class="hljs-string">&quot;spark.cores&quot;</span>)).setAppName(<span class="hljs-string">&quot;DataLoader&quot;</span>)
+
+    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;SparkSession</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">spark</span> =</span> <span class="hljs-type">SparkSession</span>.builder().config(sparkConf).getOrCreate()
+
+    <span class="hljs-keyword">import</span> spark.implicits._
+
+    <span class="hljs-comment">// &#x52A0;&#x8F7D;&#x6570;&#x636E;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">movieRDD</span> =</span> spark.sparkContext.textFile(<span class="hljs-type">MOVIE_DATA_PATH</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">movieDF</span> =</span> movieRDD.map(
+      item =&gt; {
+        <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">attr</span> =</span> item.split(<span class="hljs-string">&quot;\\^&quot;</span>)
+        <span class="hljs-type">Movie</span>(attr(<span class="hljs-number">0</span>).toInt, attr(<span class="hljs-number">1</span>).trim, attr(<span class="hljs-number">2</span>).trim, attr(<span class="hljs-number">3</span>).trim, attr(<span class="hljs-number">4</span>).trim, attr(<span class="hljs-number">5</span>).trim, attr(<span class="hljs-number">6</span>).trim, attr(<span class="hljs-number">7</span>).trim, attr(<span class="hljs-number">8</span>).trim, attr(<span class="hljs-number">9</span>).trim)
+      }
+    ).toDF()
+
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">ratingRDD</span> =</span> spark.sparkContext.textFile(<span class="hljs-type">RATING_DATA_PATH</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">ratingDF</span> =</span> ratingRDD.map(item =&gt; {
+      <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">attr</span> =</span> item.split(<span class="hljs-string">&quot;,&quot;</span>)
+      <span class="hljs-type">Rating</span>(attr(<span class="hljs-number">0</span>).toInt,attr(<span class="hljs-number">1</span>).toInt,attr(<span class="hljs-number">2</span>).toDouble,attr(<span class="hljs-number">3</span>).toInt)
+    }).toDF()
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">tagRDD</span> =</span> spark.sparkContext.textFile(<span class="hljs-type">TAG_DATA_PATH</span>)
+    <span class="hljs-comment">//&#x5C06;tagRDD&#x88C5;&#x6362;&#x4E3A;DataFrame</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">tagDF</span> =</span> tagRDD.map(item =&gt; {
+      <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">attr</span> =</span> item.split(<span class="hljs-string">&quot;,&quot;</span>)
+      <span class="hljs-type">Tag</span>(attr(<span class="hljs-number">0</span>).toInt,attr(<span class="hljs-number">1</span>).toInt,attr(<span class="hljs-number">2</span>).trim,attr(<span class="hljs-number">3</span>).toInt)
+    }).toDF()
+
+    <span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">mongoConfig</span> =</span> <span class="hljs-type">MongoConfig</span>(config(<span class="hljs-string">&quot;mongo.uri&quot;</span>), config(<span class="hljs-string">&quot;mongo.db&quot;</span>))
+
+    <span class="hljs-comment">// &#x5C06;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5230;MongoDB</span>
+    storeDataInMongoDB(movieDF, ratingDF, tagDF)
+
+    <span class="hljs-comment">// &#x6570;&#x636E;&#x9884;&#x5904;&#x7406;&#xFF0C;&#x628A;movie&#x5BF9;&#x5E94;&#x7684;tag&#x4FE1;&#x606F;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;&#xFF0C;&#x52A0;&#x4E00;&#x5217; tag1|tag2|tag3...</span>
+    <span class="hljs-keyword">import</span> org.apache.spark.sql.functions._
+
+    <span class="hljs-comment">/**
+     * mid, tags
+     *
+     * tags: tag1|tag2|tag3...
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">newTag</span> =</span> tagDF.groupBy($<span class="hljs-string">&quot;mid&quot;</span>)
+      .agg( concat_ws( <span class="hljs-string">&quot;|&quot;</span>, collect_set($<span class="hljs-string">&quot;tag&quot;</span>) ).as(<span class="hljs-string">&quot;tags&quot;</span>) )
+      .select(<span class="hljs-string">&quot;mid&quot;</span>, <span class="hljs-string">&quot;tags&quot;</span>)
+
+    <span class="hljs-comment">// newTag&#x548C;movie&#x505A;join&#xFF0C;&#x6570;&#x636E;&#x5408;&#x5E76;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5DE6;&#x5916;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">movieWithTagsDF</span> =</span> movieDF.join(newTag, <span class="hljs-type">Seq</span>(<span class="hljs-string">&quot;mid&quot;</span>), <span class="hljs-string">&quot;left&quot;</span>)
+
+    <span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">esConfig</span> =</span> <span class="hljs-type">ESConfig</span>(config(<span class="hljs-string">&quot;es.httpHosts&quot;</span>), config(<span class="hljs-string">&quot;es.transportHosts&quot;</span>), config(<span class="hljs-string">&quot;es.index&quot;</span>), config(<span class="hljs-string">&quot;es.cluster.name&quot;</span>))
+
+    <span class="hljs-comment">//     &#x4FDD;&#x5B58;&#x6570;&#x636E;&#x5230;ES</span>
+    storeDataInES(movieWithTagsDF)
+
+    spark.stop()
+  }
+}
+</code></pre>
+<h3 id="3-&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;mongo">3. &#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;Mongo</h3>
+<pre><code class="lang-scala">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">storeDataInMongoDB</span>(</span>movieDF: <span class="hljs-type">DataFrame</span>, ratingDF: <span class="hljs-type">DataFrame</span>, tagDF: <span class="hljs-type">DataFrame</span>)(<span class="hljs-keyword">implicit</span> mongoConfig: <span class="hljs-type">MongoConfig</span>): <span class="hljs-type">Unit</span> ={
+    <span class="hljs-comment">// &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;mongodb&#x7684;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">mongoClient</span> =</span> <span class="hljs-type">MongoClient</span>(<span class="hljs-type">MongoClientURI</span>(mongoConfig.uri))
+
+    <span class="hljs-comment">// &#x5982;&#x679C;mongodb&#x4E2D;&#x5DF2;&#x7ECF;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5148;&#x5220;&#x9664;</span>
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_MOVIE_COLLECTION</span>).dropCollection()
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_RATING_COLLECTION</span>).dropCollection()
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_TAG_COLLECTION</span>).dropCollection()
+
+    <span class="hljs-comment">// &#x5C06;DF&#x6570;&#x636E;&#x5199;&#x5165;&#x5BF9;&#x5E94;&#x7684;mongodb&#x8868;&#x4E2D;</span>
+    movieDF.write
+      .option(<span class="hljs-string">&quot;uri&quot;</span>, mongoConfig.uri)
+      .option(<span class="hljs-string">&quot;collection&quot;</span>, <span class="hljs-type">MONGODB_MOVIE_COLLECTION</span>)
+      .mode(<span class="hljs-string">&quot;overwrite&quot;</span>)
+      .format(<span class="hljs-string">&quot;com.mongodb.spark.sql&quot;</span>)
+      .save()
+
+    ratingDF.write
+      .option(<span class="hljs-string">&quot;uri&quot;</span>, mongoConfig.uri)
+      .option(<span class="hljs-string">&quot;collection&quot;</span>, <span class="hljs-type">MONGODB_RATING_COLLECTION</span>)
+      .mode(<span class="hljs-string">&quot;overwrite&quot;</span>)
+      .format(<span class="hljs-string">&quot;com.mongodb.spark.sql&quot;</span>)
+      .save()
+
+    tagDF.write
+      .option(<span class="hljs-string">&quot;uri&quot;</span>, mongoConfig.uri)
+      .option(<span class="hljs-string">&quot;collection&quot;</span>, <span class="hljs-type">MONGODB_TAG_COLLECTION</span>)
+      .mode(<span class="hljs-string">&quot;overwrite&quot;</span>)
+      .format(<span class="hljs-string">&quot;com.mongodb.spark.sql&quot;</span>)
+      .save()
+
+    <span class="hljs-comment">//&#x5BF9;&#x6570;&#x636E;&#x8868;&#x5EFA;&#x7D22;&#x5F15;</span>
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_MOVIE_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;mid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_RATING_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;uid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_RATING_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;mid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_TAG_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;uid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_TAG_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;mid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+
+    mongoClient.close()
+
+  }
+</code></pre>
+<h3 id="4-&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;elasticsearch">4. &#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;elasticsearch</h3>
+<h4 id="41-&#x542F;&#x52A8;elasticsearch-&#x670D;&#x52A1;&#x5668;">4.1 &#x542F;&#x52A8;elasticsearch &#x670D;&#x52A1;&#x5668;</h4>
+<h4 id="42-&#x4EE3;&#x7801;&#x76F8;&#x5173;">4.2 &#x4EE3;&#x7801;&#x76F8;&#x5173;</h4>
+<pre><code class="lang-scala">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">storeDataInES</span>(</span>movieDF: <span class="hljs-type">DataFrame</span>)(<span class="hljs-keyword">implicit</span> eSConfig: <span class="hljs-type">ESConfig</span>): <span class="hljs-type">Unit</span> ={
+    <span class="hljs-comment">// &#x65B0;&#x5EFA;es&#x914D;&#x7F6E;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">settings</span>:</span> <span class="hljs-type">Settings</span> = <span class="hljs-type">Settings</span>.builder().put(<span class="hljs-string">&quot;cluster.name&quot;</span>, eSConfig.clustername).build()
+
+    <span class="hljs-comment">// &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;es&#x5BA2;&#x6237;&#x7AEF;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">esClient</span> =</span> <span class="hljs-keyword">new</span> <span class="hljs-type">PreBuiltTransportClient</span>(settings)
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">REGEX_HOST_PORT</span> =</span> <span class="hljs-string">&quot;(.+):(\\d+)&quot;</span>.r
+    eSConfig.transportHosts.split(<span class="hljs-string">&quot;,&quot;</span>).foreach{
+      <span class="hljs-keyword">case</span> <span class="hljs-type">REGEX_HOST_PORT</span>(host: <span class="hljs-type">String</span>, port: <span class="hljs-type">String</span>) =&gt; {
+        esClient.addTransportAddress(<span class="hljs-keyword">new</span> <span class="hljs-type">TransportAddress</span>( <span class="hljs-type">InetAddress</span>.getByName(host), port.toInt ))
+      }
+    }
+
+    <span class="hljs-comment">// &#x5148;&#x6E05;&#x7406;&#x9057;&#x7559;&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-keyword">if</span>( esClient.admin().indices().exists( <span class="hljs-keyword">new</span> <span class="hljs-type">IndicesExistsRequest</span>(eSConfig.index) )
+      .actionGet()
+      .isExists
+    ){
+      esClient.admin().indices().delete( <span class="hljs-keyword">new</span> <span class="hljs-type">DeleteIndexRequest</span>(eSConfig.index) )
+    }
+
+    esClient.admin().indices().create( <span class="hljs-keyword">new</span> <span class="hljs-type">CreateIndexRequest</span>(eSConfig.index) )
+
+    movieDF.write
+      .option(<span class="hljs-string">&quot;es.nodes&quot;</span>, eSConfig.httpHosts)
+      .option(<span class="hljs-string">&quot;es.http.timeout&quot;</span>, <span class="hljs-string">&quot;100m&quot;</span>)
+      .option(<span class="hljs-string">&quot;es.mapping.id&quot;</span>, <span class="hljs-string">&quot;mid&quot;</span>)
+      .mode(<span class="hljs-string">&quot;overwrite&quot;</span>)
+      .format(<span class="hljs-string">&quot;org.elasticsearch.spark.sql&quot;</span>)
+      .save(eSConfig.index + <span class="hljs-string">&quot;/&quot;</span> + <span class="hljs-type">ES_MOVIE_INDEX</span>)
+  }
+</code></pre>
+<p><strong>&#x6CE8;: &#x5B8C;&#x6574;&#x4EE3;&#x7801;</strong></p>
+<pre><code class="lang-scala"><span class="hljs-keyword">package</span> com.kkb.recommender
+
+<span class="hljs-keyword">import</span> java.net.<span class="hljs-type">InetAddress</span>
+
+<span class="hljs-keyword">import</span> com.mongodb.casbah.commons.<span class="hljs-type">MongoDBObject</span>
+<span class="hljs-keyword">import</span> com.mongodb.casbah.{<span class="hljs-type">MongoClient</span>, <span class="hljs-type">MongoClientURI</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.<span class="hljs-type">SparkConf</span>
+<span class="hljs-keyword">import</span> org.apache.spark.sql.{<span class="hljs-type">DataFrame</span>, <span class="hljs-type">SparkSession</span>}
+<span class="hljs-keyword">import</span> org.elasticsearch.action.admin.indices.create.<span class="hljs-type">CreateIndexRequest</span>
+<span class="hljs-keyword">import</span> org.elasticsearch.action.admin.indices.delete.<span class="hljs-type">DeleteIndexRequest</span>
+<span class="hljs-keyword">import</span> org.elasticsearch.action.admin.indices.exists.indices.<span class="hljs-type">IndicesExistsRequest</span>
+<span class="hljs-keyword">import</span> org.elasticsearch.common.settings.<span class="hljs-type">Settings</span>
+<span class="hljs-keyword">import</span> org.elasticsearch.common.transport.<span class="hljs-type">TransportAddress</span>
+<span class="hljs-keyword">import</span> org.elasticsearch.transport.client.<span class="hljs-type">PreBuiltTransportClient</span>
+
+
+
+<span class="hljs-comment">/**
+ * Movie &#x6570;&#x636E;&#x96C6;
+ *
+ * 260                                         &#x7535;&#x5F71;ID&#xFF0C;mid
+ * Star Wars: Episode IV - A New Hope (1977)   &#x7535;&#x5F71;&#x540D;&#x79F0;&#xFF0C;name
+ * Princess Leia is captured and held hostage  &#x8BE6;&#x60C5;&#x63CF;&#x8FF0;&#xFF0C;descri
+ * 121 minutes                                 &#x65F6;&#x957F;&#xFF0C;timelong
+ * September 21, 2004                          &#x53D1;&#x884C;&#x65F6;&#x95F4;&#xFF0C;issue
+ * 1977                                        &#x62CD;&#x6444;&#x65F6;&#x95F4;&#xFF0C;shoot
+ * English                                     &#x8BED;&#x8A00;&#xFF0C;language
+ * Action|Adventure|Sci-Fi                     &#x7C7B;&#x578B;&#xFF0C;genres
+ * Mark Hamill|Harrison Ford|Carrie Fisher     &#x6F14;&#x5458;&#x8868;&#xFF0C;actors
+ * George Lucas                                &#x5BFC;&#x6F14;&#xFF0C;directors
+ *
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Movie</span>(</span>mid: <span class="hljs-type">Int</span>, name: <span class="hljs-type">String</span>, descri: <span class="hljs-type">String</span>, timelong: <span class="hljs-type">String</span>, issue: <span class="hljs-type">String</span>,
+                 shoot: <span class="hljs-type">String</span>, language: <span class="hljs-type">String</span>, genres: <span class="hljs-type">String</span>, actors: <span class="hljs-type">String</span>, directors: <span class="hljs-type">String</span>)
+
+<span class="hljs-comment">/**
+ * Rating&#x6570;&#x636E;&#x96C6;
+ *
+ * 1,31,2.5,1260759144
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rating</span>(</span>uid: <span class="hljs-type">Int</span>, mid: <span class="hljs-type">Int</span>, score: <span class="hljs-type">Double</span>, timestamp: <span class="hljs-type">Int</span> )
+
+<span class="hljs-comment">/**
+ * Tag&#x6570;&#x636E;&#x96C6;
+ *
+ * 15,1955,dentist,1193435061
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span>(</span>uid: <span class="hljs-type">Int</span>, mid: <span class="hljs-type">Int</span>, tag: <span class="hljs-type">String</span>, timestamp: <span class="hljs-type">Int</span>)
+
+<span class="hljs-comment">// &#x628A;mongo&#x548C;es&#x7684;&#x914D;&#x7F6E;&#x5C01;&#x88C5;&#x6210;&#x6837;&#x4F8B;&#x7C7B;</span>
+
+<span class="hljs-comment">/**
+ *
+ * @param uri MongoDB&#x8FDE;&#x63A5;
+ * @param db  MongoDB&#x6570;&#x636E;&#x5E93;
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MongoConfig</span>(</span>uri:<span class="hljs-type">String</span>, db:<span class="hljs-type">String</span>)
+
+<span class="hljs-comment">/**
+ *
+ * @param httpHosts       http&#x4E3B;&#x673A;&#x5217;&#x8868;&#xFF0C;&#x9017;&#x53F7;&#x5206;&#x9694;
+ * @param transportHosts  transport&#x4E3B;&#x673A;&#x5217;&#x8868;
+ * @param index            &#x9700;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x7D22;&#x5F15;
+ * @param clustername      &#x96C6;&#x7FA4;&#x540D;&#x79F0;&#xFF0C;&#x9ED8;&#x8BA4;elasticsearch
+ */</span>
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ESConfig</span>(</span>httpHosts:<span class="hljs-type">String</span>, transportHosts:<span class="hljs-type">String</span>, index:<span class="hljs-type">String</span>, clustername:<span class="hljs-type">String</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">DataLoader</span> {</span>
+
+  <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x5E38;&#x91CF;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">MOVIE_DATA_PATH</span> =</span> <span class="hljs-string">&quot;/Users/xingyeah/Desktop/workspace/MovieSystemRecommender/recomonder/dataLoader/src/main/resources/movies.csv&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">RATING_DATA_PATH</span> =</span> <span class="hljs-string">&quot;/Users/xingyeah/Desktop/workspace/MovieSystemRecommender/recomonder/dataLoader/src/main/resources/ratings.csv&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">TAG_DATA_PATH</span> =</span> <span class="hljs-string">&quot;/Users/xingyeah/Desktop/workspace/MovieSystemRecommender/recomonder/dataLoader/src/main/resources/tags.csv&quot;</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">MONGODB_MOVIE_COLLECTION</span> =</span> <span class="hljs-string">&quot;Movie&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">MONGODB_RATING_COLLECTION</span> =</span> <span class="hljs-string">&quot;Rating&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">MONGODB_TAG_COLLECTION</span> =</span> <span class="hljs-string">&quot;Tag&quot;</span>
+  <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">ES_MOVIE_INDEX</span> =</span> <span class="hljs-string">&quot;Movie&quot;</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>(</span>args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">config</span> =</span> <span class="hljs-type">Map</span>(
+      <span class="hljs-string">&quot;spark.cores&quot;</span> -&gt; <span class="hljs-string">&quot;local[*]&quot;</span>,
+      <span class="hljs-string">&quot;mongo.uri&quot;</span> -&gt; <span class="hljs-string">&quot;mongodb://cdh1:27017/recommender&quot;</span>,
+      <span class="hljs-string">&quot;mongo.db&quot;</span> -&gt; <span class="hljs-string">&quot;recommender&quot;</span>,
+      <span class="hljs-string">&quot;es.httpHosts&quot;</span> -&gt; <span class="hljs-string">&quot;cdh1:9200&quot;</span>,
+      <span class="hljs-string">&quot;es.transportHosts&quot;</span> -&gt; <span class="hljs-string">&quot;cdh1:9300&quot;</span>,
+      <span class="hljs-string">&quot;es.index&quot;</span> -&gt; <span class="hljs-string">&quot;recommender&quot;</span>,
+      <span class="hljs-string">&quot;es.cluster.name&quot;</span> -&gt; <span class="hljs-string">&quot;cluster_es&quot;</span>
+    )
+
+    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;sparkConf</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">sparkConf</span> =</span> <span class="hljs-keyword">new</span> <span class="hljs-type">SparkConf</span>().setMaster(config(<span class="hljs-string">&quot;spark.cores&quot;</span>)).setAppName(<span class="hljs-string">&quot;DataLoader&quot;</span>)
+
+    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;SparkSession</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">spark</span> =</span> <span class="hljs-type">SparkSession</span>.builder().config(sparkConf).getOrCreate()
+
+    <span class="hljs-keyword">import</span> spark.implicits._
+
+    <span class="hljs-comment">// &#x52A0;&#x8F7D;&#x6570;&#x636E;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">movieRDD</span> =</span> spark.sparkContext.textFile(<span class="hljs-type">MOVIE_DATA_PATH</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">movieDF</span> =</span> movieRDD.map(
+      item =&gt; {
+        <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">attr</span> =</span> item.split(<span class="hljs-string">&quot;\\^&quot;</span>)
+        <span class="hljs-type">Movie</span>(attr(<span class="hljs-number">0</span>).toInt, attr(<span class="hljs-number">1</span>).trim, attr(<span class="hljs-number">2</span>).trim, attr(<span class="hljs-number">3</span>).trim, attr(<span class="hljs-number">4</span>).trim, attr(<span class="hljs-number">5</span>).trim, attr(<span class="hljs-number">6</span>).trim, attr(<span class="hljs-number">7</span>).trim, attr(<span class="hljs-number">8</span>).trim, attr(<span class="hljs-number">9</span>).trim)
+      }
+    ).toDF()
+
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">ratingRDD</span> =</span> spark.sparkContext.textFile(<span class="hljs-type">RATING_DATA_PATH</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">ratingDF</span> =</span> ratingRDD.map(item =&gt; {
+      <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">attr</span> =</span> item.split(<span class="hljs-string">&quot;,&quot;</span>)
+      <span class="hljs-type">Rating</span>(attr(<span class="hljs-number">0</span>).toInt,attr(<span class="hljs-number">1</span>).toInt,attr(<span class="hljs-number">2</span>).toDouble,attr(<span class="hljs-number">3</span>).toInt)
+    }).toDF()
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">tagRDD</span> =</span> spark.sparkContext.textFile(<span class="hljs-type">TAG_DATA_PATH</span>)
+    <span class="hljs-comment">//&#x5C06;tagRDD&#x88C5;&#x6362;&#x4E3A;DataFrame</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">tagDF</span> =</span> tagRDD.map(item =&gt; {
+      <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">attr</span> =</span> item.split(<span class="hljs-string">&quot;,&quot;</span>)
+      <span class="hljs-type">Tag</span>(attr(<span class="hljs-number">0</span>).toInt,attr(<span class="hljs-number">1</span>).toInt,attr(<span class="hljs-number">2</span>).trim,attr(<span class="hljs-number">3</span>).toInt)
+    }).toDF()
+
+    <span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">mongoConfig</span> =</span> <span class="hljs-type">MongoConfig</span>(config(<span class="hljs-string">&quot;mongo.uri&quot;</span>), config(<span class="hljs-string">&quot;mongo.db&quot;</span>))
+
+    <span class="hljs-comment">// &#x5C06;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5230;MongoDB</span>
+    storeDataInMongoDB(movieDF, ratingDF, tagDF)
+
+    <span class="hljs-comment">// &#x6570;&#x636E;&#x9884;&#x5904;&#x7406;&#xFF0C;&#x628A;movie&#x5BF9;&#x5E94;&#x7684;tag&#x4FE1;&#x606F;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;&#xFF0C;&#x52A0;&#x4E00;&#x5217; tag1|tag2|tag3...</span>
+    <span class="hljs-keyword">import</span> org.apache.spark.sql.functions._
+
+    <span class="hljs-comment">/**
+     * mid, tags
+     * &#x4E3A;&#x4E86;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5230;es&#x4E2D;,&#x65B9;&#x4FBF;&#x901A;&#x8FC7;&#x6807;&#x7B7E;&#x68C0;&#x7D22;, &#x53EF;&#x4EE5;&#x5728;&#x5B58;&#x50A8;&#x5230;es&#x4E4B;&#x524D;, &#x5BF9;&#x6570;&#x636E;&#x505A;&#x4E00;&#x4E9B;&#x9884;&#x5904;&#x7406;,&#x628A;movie&#x5BF9;&#x5E94;&#x7684;tag&#x4FE1;&#x606F;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;, &#x52A0;&#x4E00;&#x5217; tag1|tag2|tag3
+     * &#x5148;&#x6309;&#x7167;mid&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#x9009;&#x51FA;&#x7535;&#x5F71;&#x7684;&#x6240;&#x6709;tag(&#x805A;&#x5408;), &#x6DFB;&#x52A0;&#x5230;movieDF&#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x4E2A;join&#x64CD;&#x4F5C;
+     * &#x9700;&#x8981;&#x6709;&#x4E00;&#x5806;&#x7684;&#x7B97;&#x5B50;, &#x6309;&#x7167;mid&#x505A;&#x4E00;&#x4E2A;&#x805A;&#x5408;, &#x7136;&#x540E;&#x7528;&#x7AD6;&#x7EBF;&#x5206;&#x5272;&#x8054;&#x63A5;&#x5728;&#x4E00;&#x8D77;
+     * &#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5148;&#x5C06;sparksql&#x91CC;&#x9762;&#x7684;&#x6240;&#x6709;&#x7684;&#x51FD;&#x6570;&#x5BFC;&#x8FDB;&#x6765;
+     * tags: tag1|tag2|tag3...
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">newTag</span> =</span> tagDF.groupBy($<span class="hljs-string">&quot;mid&quot;</span>)
+      .agg( concat_ws( <span class="hljs-string">&quot;|&quot;</span>, collect_set($<span class="hljs-string">&quot;tag&quot;</span>) ).as(<span class="hljs-string">&quot;tags&quot;</span>) )
+      .select(<span class="hljs-string">&quot;mid&quot;</span>, <span class="hljs-string">&quot;tags&quot;</span>)
+
+    <span class="hljs-comment">// newTag&#x548C;movie&#x505A;join&#xFF0C;&#x6570;&#x636E;&#x5408;&#x5E76;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5DE6;&#x5916;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">movieWithTagsDF</span> =</span> movieDF.join(newTag, <span class="hljs-type">Seq</span>(<span class="hljs-string">&quot;mid&quot;</span>), <span class="hljs-string">&quot;left&quot;</span>)
+    <span class="hljs-comment">//&#x548C;&#x4E4B;&#x524D;&#x7684;mongo&#x4E00;&#x6837;, &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x9690;&#x5F0F;&#x7684;es&#x914D;&#x7F6E;&#x53C2;&#x6570;</span>
+    <span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">esConfig</span> =</span> <span class="hljs-type">ESConfig</span>(config(<span class="hljs-string">&quot;es.httpHosts&quot;</span>), config(<span class="hljs-string">&quot;es.transportHosts&quot;</span>), config(<span class="hljs-string">&quot;es.index&quot;</span>), config(<span class="hljs-string">&quot;es.cluster.name&quot;</span>))
+
+    <span class="hljs-comment">//     &#x4FDD;&#x5B58;&#x6570;&#x636E;&#x5230;ES</span>
+    storeDataInES(movieWithTagsDF)
+
+    spark.stop()
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">storeDataInMongoDB</span>(</span>movieDF: <span class="hljs-type">DataFrame</span>, ratingDF: <span class="hljs-type">DataFrame</span>, tagDF: <span class="hljs-type">DataFrame</span>)(<span class="hljs-keyword">implicit</span> mongoConfig: <span class="hljs-type">MongoConfig</span>): <span class="hljs-type">Unit</span> ={
+    <span class="hljs-comment">// &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;mongodb&#x7684;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">mongoClient</span> =</span> <span class="hljs-type">MongoClient</span>(<span class="hljs-type">MongoClientURI</span>(mongoConfig.uri))
+
+    <span class="hljs-comment">// &#x5982;&#x679C;mongodb&#x4E2D;&#x5DF2;&#x7ECF;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5148;&#x5220;&#x9664;</span>
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_MOVIE_COLLECTION</span>).dropCollection()
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_RATING_COLLECTION</span>).dropCollection()
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_TAG_COLLECTION</span>).dropCollection()
+
+    <span class="hljs-comment">// &#x5C06;DF&#x6570;&#x636E;&#x5199;&#x5165;&#x5BF9;&#x5E94;&#x7684;mongodb&#x8868;&#x4E2D;</span>
+    movieDF.write
+      .option(<span class="hljs-string">&quot;uri&quot;</span>, mongoConfig.uri)
+      .option(<span class="hljs-string">&quot;collection&quot;</span>, <span class="hljs-type">MONGODB_MOVIE_COLLECTION</span>)
+      .mode(<span class="hljs-string">&quot;overwrite&quot;</span>)
+      .format(<span class="hljs-string">&quot;com.mongodb.spark.sql&quot;</span>)
+      .save()
+
+    ratingDF.write
+      .option(<span class="hljs-string">&quot;uri&quot;</span>, mongoConfig.uri)
+      .option(<span class="hljs-string">&quot;collection&quot;</span>, <span class="hljs-type">MONGODB_RATING_COLLECTION</span>)
+      .mode(<span class="hljs-string">&quot;overwrite&quot;</span>)
+      .format(<span class="hljs-string">&quot;com.mongodb.spark.sql&quot;</span>)
+      .save()
+
+    tagDF.write
+      .option(<span class="hljs-string">&quot;uri&quot;</span>, mongoConfig.uri)
+      .option(<span class="hljs-string">&quot;collection&quot;</span>, <span class="hljs-type">MONGODB_TAG_COLLECTION</span>)
+      .mode(<span class="hljs-string">&quot;overwrite&quot;</span>)
+      .format(<span class="hljs-string">&quot;com.mongodb.spark.sql&quot;</span>)
+      .save()
+
+    <span class="hljs-comment">//&#x5BF9;&#x6570;&#x636E;&#x8868;&#x5EFA;&#x7D22;&#x5F15;</span>
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_MOVIE_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;mid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_RATING_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;uid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_RATING_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;mid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_TAG_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;uid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+    mongoClient(mongoConfig.db)(<span class="hljs-type">MONGODB_TAG_COLLECTION</span>).createIndex(<span class="hljs-type">MongoDBObject</span>(<span class="hljs-string">&quot;mid&quot;</span> -&gt; <span class="hljs-number">1</span>))
+
+    mongoClient.close()
+
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">storeDataInES</span>(</span>movieDF: <span class="hljs-type">DataFrame</span>)(<span class="hljs-keyword">implicit</span> eSConfig: <span class="hljs-type">ESConfig</span>): <span class="hljs-type">Unit</span> ={
+    <span class="hljs-comment">// &#x65B0;&#x5EFA;es&#x914D;&#x7F6E;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">settings</span>:</span> <span class="hljs-type">Settings</span> = <span class="hljs-type">Settings</span>.builder().put(<span class="hljs-string">&quot;cluster.name&quot;</span>, eSConfig.clustername).build()
+
+    <span class="hljs-comment">// &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;es&#x5BA2;&#x6237;&#x7AEF;</span>
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">esClient</span> =</span> <span class="hljs-keyword">new</span> <span class="hljs-type">PreBuiltTransportClient</span>(settings)
+
+    <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">REGEX_HOST_PORT</span> =</span> <span class="hljs-string">&quot;(.+):(\\d+)&quot;</span>.r
+    eSConfig.transportHosts.split(<span class="hljs-string">&quot;,&quot;</span>).foreach{
+      <span class="hljs-keyword">case</span> <span class="hljs-type">REGEX_HOST_PORT</span>(host: <span class="hljs-type">String</span>, port: <span class="hljs-type">String</span>) =&gt; {
+        <span class="hljs-comment">//        esClient.addTransportAddress(new InetSocketTransportAddress( InetAddress.getByName(host), port.toInt ))</span>
+        esClient.addTransportAddress(<span class="hljs-keyword">new</span> <span class="hljs-type">TransportAddress</span>( <span class="hljs-type">InetAddress</span>.getByName(host), port.toInt ))
+      }
+    }
+
+    <span class="hljs-comment">// &#x5148;&#x6E05;&#x7406;&#x9057;&#x7559;&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-keyword">if</span>( esClient.admin().indices().exists( <span class="hljs-keyword">new</span> <span class="hljs-type">IndicesExistsRequest</span>(eSConfig.index) )
+      .actionGet()
+      .isExists
+    ){
+      esClient.admin().indices().delete( <span class="hljs-keyword">new</span> <span class="hljs-type">DeleteIndexRequest</span>(eSConfig.index) )
+    }
+
+    esClient.admin().indices().create( <span class="hljs-keyword">new</span> <span class="hljs-type">CreateIndexRequest</span>(eSConfig.index) )
+
+    <span class="hljs-comment">// &#x5C06;movingDF&#x5199;&#x5165;&#x5230;&#x5BF9;&#x5E94;&#x7684;index&#x4E2D;&#x53BB;</span>
+    movieDF.write
+      .option(<span class="hljs-string">&quot;es.nodes&quot;</span>, eSConfig.httpHosts)
+      .option(<span class="hljs-string">&quot;es.http.timeout&quot;</span>, <span class="hljs-string">&quot;100m&quot;</span>)
+      .option(<span class="hljs-string">&quot;es.mapping.id&quot;</span>, <span class="hljs-string">&quot;mid&quot;</span>)
+      .mode(<span class="hljs-string">&quot;overwrite&quot;</span>)
+      .format(<span class="hljs-string">&quot;org.elasticsearch.spark.sql&quot;</span>)
+      .save(eSConfig.index + <span class="hljs-string">&quot;/&quot;</span> + <span class="hljs-type">ES_MOVIE_INDEX</span>)
+  }
+
+}
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../2-加载数据/1-项目搭建.html" class="navigation navigation-prev " aria-label="Previous page: 创建项目"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../3-离线推荐/index.html" class="navigation navigation-next " aria-label="Next page: 离线推荐"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
